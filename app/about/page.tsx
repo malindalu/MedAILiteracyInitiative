@@ -22,7 +22,7 @@ export default function AboutPage() {
                 <p
                   key={i}
                   style={{
-                    fontSize: "1.05rem",
+                    fontSize: "1.1rem",
                     color: i === 0 ? "var(--black)" : "var(--dark-brown)",
                     lineHeight: 1.85,
                     marginBottom: "1.5rem",
@@ -60,9 +60,9 @@ export default function AboutPage() {
               >
                 <div className="overline-dark" style={{ marginBottom: "1rem" }}>Who We Serve</div>
                 {[
-                  { group: "High School Students", detail: "Technical depth, research skills, portfolio projects" },
-                  { group: "Community Members", detail: "Practical AI literacy, safety, everyday use" },
-                  { group: "Educators & Orgs", detail: "Curriculum partnerships and institutional programs" },
+                  { group: "Middle School Students", detail: "Critical thinking framework, ethical considerations of AI in healthcare" },
+                  { group: "High School Students", detail: "Technical depth, portfolio projects, career possibilities in AI and medicine" },
+                  { group: "Asian Elderly Community Members", detail: "General intuition about AI, practical tips for staying safe and informed for everyday use, culturally tailored instruction" },
                 ].map((item) => (
                   <div
                     key={item.group}
@@ -74,8 +74,8 @@ export default function AboutPage() {
                       gap: "0.2rem",
                     }}
                   >
-                    <span style={{ fontSize: "0.9rem", fontWeight: 500, color: "var(--black)" }}>{item.group}</span>
-                    <span style={{ fontSize: "0.8rem", color: "var(--dark-brown)" }}>{item.detail}</span>
+                    <span style={{ fontSize: "1.0rem", fontWeight: 500, color: "var(--black)" }}>{item.group}</span>
+                    <span style={{ fontSize: "1.0rem", color: "var(--dark-brown)" }}>{item.detail}</span>
                   </div>
                 ))}
               </div>
@@ -99,10 +99,10 @@ export default function AboutPage() {
               >
                 <span style={{ fontSize: "2rem", flexShrink: 0 }}>{v.icon}</span>
                 <div>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", marginBottom: "0.5rem" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "0.5rem" }}>
                     {v.title}
                   </div>
-                  <p style={{ fontSize: "0.9rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>
+                  <p style={{ fontSize: "1.0rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>
                     {v.description}
                   </p>
                 </div>

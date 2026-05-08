@@ -31,9 +31,9 @@ export const nav = [
 // ── HOME PAGE ─────────────────────────────────────────────
 export const home = {
   hero: {
-    headline: "Teaching the Future of Medicine,\nOne Community at a Time.",
+    headline: "Understanding Health in the \nAge of AI" ,
     subheadline:
-      "The MedAI Literacy Initiative brings AI and medicine education to students, professionals, and communities — from Yale classrooms to neighborhood workshops.",
+      "We bring AI education to students and communities in the New England Area who want to understand how healthcare is changing and how to navigate it wisely for their wellbeing",
     cta: { label: "See Our Programs", href: "/programs" },
     ctaSecondary: { label: "Learn About Us", href: "/about" },
     // Place a hero image at /public/images/hero.jpg (optional — remove imageSrc to hide)
@@ -47,7 +47,7 @@ export const home = {
     { value: "2026", label: "Founded" },
   ],
   missionStatement:
-    "AI is already reshaping how clinicians diagnose, monitor, and treat patients. Yet most people — patients, students, even healthcare workers — have little understanding of how these systems work, where they fail, and who they serve. We exist to close that gap.",
+    "AI is already reshaping how people seek answers about their health and how clinicians diagnose, monitor, and treat patients. Yet most people — patients, students, even healthcare workers — have little understanding of how these systems work, where they fail, and who they serve. We aim to close that gap.",
   featuredPrograms: ["yale-sprout", "newton-chinese-school", "tzu-chi"], // references programs below
 };
 
@@ -55,9 +55,9 @@ export const home = {
 export const about = {
   headline: "Why AI Literacy in Medicine Matters",
   body: [
-    "Artificial intelligence is no longer a future concern for medicine — it is already embedded in radiology workflows, clinical documentation, drug discovery pipelines, and patient monitoring systems. The decisions these systems make affect real lives.",
-    "The MedAI Literacy Initiative was founded on a straightforward conviction: that understanding AI should not be limited to engineers and researchers. Patients deserve to understand the tools used in their care. Students deserve to enter the healthcare and technology fields with critical frameworks, not just technical skills. Communities — especially those historically underserved by both medicine and technology — deserve access to this knowledge.",
-    "We design programs for specific audiences rather than generic curricula. A high school student building a medical image classifier needs a different experience than an elderly community member learning to recognize AI-generated scams. We meet each group where they are.",
+    "Artificial intelligence is no longer a future concern for medicine — it is already embedded in radiology workflows, clinical documentation, patient monitoring systems, and chatbots used for personal health inquiries. The decisions these systems make affect real lives.",
+    "The MedAI Literacy Initiative was founded in 2025 on a straightforward conviction: that understanding AI should not be limited to engineers and researchers. Patients deserve to understand the tools used in their care.",
+    "We design programs for specific audiences rather than generic curricula. Students deserve to enter the healthcare and technology fields with critical frameworks, not just technical skills. Communities, especially those historically underserved by both medicine and technology, deserve to be informed by programs built with their unique cultures and needs in mind."
   ],
   values: [
     {
@@ -147,7 +147,7 @@ export const programs = {
       audience: "Older Adults",
       duration: "Interactive workshop",
       description:
-        "A community workshop being developed in partnership with the Tzu Chi Foundation, designed for older adults navigating an increasingly AI-saturated world. Rather than technical depth, this program prioritizes practical wisdom: understanding what AI can and cannot do, recognizing AI-generated scams, and knowing when to trust — and when not to trust — an AI system. Grounded in empathy and real use cases relevant to elderly populations.",
+        "A community workshop being developed in partnership with the Tzu Chi Foundation, designed for older adults anxious about navigating an increasingly AI-saturated world. Rather than technical depth, this program prioritizes practical wisdom: understanding what AI can and cannot do, recognizing AI-generated scams, and knowing when to trust — and when not to trust — an AI system. Grounded in empathy and real use cases relevant to elderly populations.",
       topics: [
         "Where AI appears in daily life (hospitals, customer service, entertainment)",
         "How large language models actually work — in plain language",
@@ -170,7 +170,7 @@ export const leadership = {
     {
       name: "Eric Yang",
       title: "Co-Founder & Program Director",
-      affiliation: "Clinical Researcher, Mass General Brigham Mass Eye and Ear",
+      affiliation: "Clinical Researcher, Mass General Brigham Mass Eye and Ear, Yale University",
       bio: "Eric is a clinical researcher at Mass General Brigham Mass Eye and Ear with a background in computational genomics research at Yale University. He received his bachelor's degree from Boston University and is a Newton Chinese School alumnus — now returning as an educator. His research sits at the intersection of AI and ophthalmology, and he is passionate about making that work legible to the communities it affects.",
       imageSrc: "/images/eric-yang.jpg",
       imageAlt: "Eric Yang",
@@ -178,8 +178,8 @@ export const leadership = {
     },
     {
       name: "Malinda Lu",
-      title: "Co-Founder & Curriculum Lead",
-      affiliation: "Computer Science & Mathematics, Wellesley College · Incoming SWE, Microsoft AI",
+      title: "Co-Founder & Design Lead",
+      affiliation: "Computer Science & Mathematics, Wellesley College",
       bio: "Malinda is a computer science and mathematics student at Wellesley College with three years of AI/medicine research experience across MIT and Wellesley, publishing at venues including ICML. She will join Microsoft AI as a software engineer. Before then, she is committed to building AI literacy infrastructure in the communities she grew up in.",
       imageSrc: "/images/malinda-lu.jpg",
       imageAlt: "Malinda Lu",

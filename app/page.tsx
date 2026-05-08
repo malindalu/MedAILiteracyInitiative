@@ -101,7 +101,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Stats ─────────────────────────────────────────── */}
-      <section style={{ background: "var(--cream-light)", padding: "3rem 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      {/* <section style={{ background: "var(--cream-light)", padding: "3rem 0", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "2rem" }}>
             {home.stats.map((stat) => (
@@ -125,7 +125,7 @@ export default function HomePage() {
           </div>
         </div>
         <style>{`@media (max-width: 600px) { section .container > div { grid-template-columns: repeat(2,1fr) !important; } }`}</style>
-      </section>
+      </section> */}
 
       {/* ── Mission ───────────────────────────────────────── */}
       <section className="section">
@@ -153,16 +153,16 @@ export default function HomePage() {
               }}
             >
               {[
-                { icon: "🎓", title: "Students", body: "From high schoolers building classifiers to community members recognizing scams — literacy looks different for every audience." },
-                { icon: "🏥", title: "Institutions", body: "We partner with schools, cultural organizations, and academic programs to embed AI literacy where it's needed most." },
-                { icon: "🔭", title: "Future Builders", body: "Our programs don't just teach what AI does today — they train the critical frameworks needed to shape what it does tomorrow." },
+                { icon: "📑", title: "Tailored to Communities", body: "From high schoolers building classifiers to community members recognizing scams — literacy looks different for every audience." },
+                // { icon: "🏥", title: "Institutions", body: "We partner with schools, cultural organizations, and academic programs to embed AI literacy where it's needed most." },
+                { icon: "🔭", title: "Forward Thinkers", body: "Our programs don't just teach what AI does today — they train the critical frameworks needed to shape what it does tomorrow." },
               ].map((item) => (
                 <div key={item.title}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "1.1rem", marginBottom: "0.5rem" }}>
                     <span style={{ fontSize: "1.25rem" }}>{item.icon}</span>
-                    <span style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem" }}>{item.title}</span>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem" }}>{item.title}</span>
                   </div>
-                  <p style={{ fontSize: "0.9rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>{item.body}</p>
+                  <p style={{ fontSize: "1.1rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>{item.body}</p>
                 </div>
               ))}
             </div>
@@ -187,18 +187,18 @@ export default function HomePage() {
                 <span className={`badge badge--${p.status}`} style={{ marginBottom: "1rem" }}>
                   {p.statusLabel}
                 </span>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", marginBottom: "0.5rem" }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "0.5rem" }}>
                   {p.title}
                 </div>
-                <div style={{ fontSize: "0.8rem", color: "var(--cyan)", marginBottom: "0.75rem", fontWeight: 500 }}>
+                <div style={{ fontSize: "0.9rem", color: "var(--cyan)", marginBottom: "0.75rem", fontWeight: 500 }}>
                   {p.host} · {p.audience}
                 </div>
-                <p style={{ fontSize: "0.875rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>
+                <p style={{ fontSize: "1.0rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>
                   {p.description.slice(0, 160)}…
                 </p>
                 <Link
                   href="/programs"
-                  style={{ display: "inline-block", marginTop: "1.25rem", fontSize: "0.8rem", color: "var(--cyan)", fontWeight: 500 }}
+                  style={{ display: "inline-block", marginTop: "1.25rem", fontSize: "0.9rem", color: "var(--cyan)", fontWeight: 500 }}
                 >
                   Learn more →
                 </Link>
@@ -215,7 +215,7 @@ export default function HomePage() {
           <div className="overline-dark">Leadership</div>
           <h2 className="section-headline" style={{ marginBottom: "0.75rem" }}>Founded by Researchers</h2>
           <p className="section-subheadline" style={{ margin: "0 auto 3rem" }}>
-            Grounded in real research experience across Yale, MIT, Wellesley, and Mass General Brigham.
+            With diverse expertise from Yale, MIT, Wellesley, and Mass General Brigham.
           </p>
           <div style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap" }}>
             {leadership.members.map((m) => (
