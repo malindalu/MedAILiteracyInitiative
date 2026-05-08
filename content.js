@@ -47,7 +47,7 @@ export const home = {
     { value: "2026", label: "Founded" },
   ],
   missionStatement:
-    "AI is already reshaping how people seek answers about their health and how clinicians diagnose, monitor, and treat patients. Yet most people — patients, students, even healthcare workers — have little understanding of how these systems work, where they fail, and who they serve. We aim to close that gap.",
+    "Artificial intelligence (AI) is already reshaping how people seek answers about their health and how clinicians diagnose, monitor, and treat patients. Yet most people — patients, students, even healthcare workers — have little understanding of how these systems work, where they fail, and who they serve. We aim to close that gap.",
   featuredPrograms: ["yale-sprout", "newton-chinese-school", "tzu-chi"], // references programs below
 };
 
@@ -56,8 +56,8 @@ export const about = {
   headline: "Why AI Literacy in Medicine Matters",
   body: [
     "Artificial intelligence is no longer a future concern for medicine — it is already embedded in radiology workflows, clinical documentation, patient monitoring systems, and chatbots used for personal health inquiries. The decisions these systems make affect real lives.",
-    "The MedAI Literacy Initiative was founded in 2025 on a straightforward conviction: that understanding AI should not be limited to engineers and researchers. Patients deserve to understand the tools used in their care.",
-    "We design programs for specific audiences rather than generic curricula. Students deserve to enter the healthcare and technology fields with critical frameworks, not just technical skills. Communities, especially those historically underserved by both medicine and technology, deserve to be informed by programs built with their unique cultures and needs in mind."
+    "The MedAI Literacy Initiative was founded in 2025 on a straightforward conviction: that understanding AI should not be limited to engineers and researchers. Everyone deserves to understand the tools used in their care.",
+    "We design programs for specific audiences. Students should enter the healthcare and technology fields with critical frameworks, not just technical skills. Communities, especially those historically underserved by both medicine and technology, deserve to be informed by programs built with their unique cultures and needs in mind."
   ],
   values: [
     {
@@ -125,7 +125,7 @@ export const programs = {
       audience: "Middle & High School Students",
       duration: "9-session project-based course",
       description:
-        "A semester-length, project-based course in active development with Newton Chinese School. Students build and evaluate real AI systems applied to medical data — not as a coding exercise, but as a structured research experience. The curriculum emphasizes both technical implementation and critical clinical thinking: how do you interpret a model's outputs? What does a confusion matrix mean for a patient? We especially encourage participation from female students and those underrepresented in computer science.",
+        "A semester-long, project-based course in active development with Newton Chinese School. Students build and evaluate real AI systems applied to medical data — not as a coding exercise, but as a structured research experience. The curriculum emphasizes both technical implementation and critical clinical thinking: how do you interpret a model's outputs? What does a confusion matrix mean for a patient? We especially encourage participation from female students and those underrepresented in computer science.",
       topics: [
         "AI architectures: CNNs, decision trees, LLMs",
         "Medical imaging classification and segmentation",
@@ -147,7 +147,7 @@ export const programs = {
       audience: "Older Adults",
       duration: "Interactive workshop",
       description:
-        "A community workshop being developed in partnership with the Tzu Chi Foundation, designed for older adults anxious about navigating an increasingly AI-saturated world. Rather than technical depth, this program prioritizes practical wisdom: understanding what AI can and cannot do, recognizing AI-generated scams, and knowing when to trust — and when not to trust — an AI system. Grounded in empathy and real use cases relevant to elderly populations.",
+        "A community workshop being developed in partnership with the Tzu Chi Foundation, designed for older adults anxious about navigating an increasingly AI-saturated world. Rather than technical depth, this program prioritizes practical wisdom: understanding what AI can and cannot do, recognizing AI-generated scams, and knowing when to trust — and when not to trust — an AI system. This workshop will be taught in Mandarin with cultural awareness of what Asian elderly members tend to think and fear about technology and healthcare.",
       topics: [
         "Where AI appears in daily life (hospitals, customer service, entertainment)",
         "How large language models actually work — in plain language",
@@ -165,13 +165,13 @@ export const programs = {
 // ── LEADERSHIP ────────────────────────────────────────────
 export const leadership = {
   headline: "Leadership",
-  subheadline: "Founded and led by researchers who believe literacy is infrastructure.",
+  subheadline: "Founded and led by researchers.",
   members: [
     {
       name: "Eric Yang",
       title: "Co-Founder & Program Director",
       affiliation: "Clinical Researcher, Mass General Brigham Mass Eye and Ear, Yale University",
-      bio: "Eric is a clinical researcher at Mass General Brigham Mass Eye and Ear with a background in computational genomics research at Yale University. He received his bachelor's degree from Boston University and is a Newton Chinese School alumnus — now returning as an educator. His research sits at the intersection of AI and ophthalmology, and he is passionate about making that work legible to the communities it affects.",
+      bio: "Eric is a clinical researcher at Mass General Brigham Mass Eye and Ear with a background in computational genomics research at Yale University. He received his bachelor's degree in Biology with a Data Science minor from Boston University. His research sits at the intersection of AI and medicine, and he is passionate about making that work understandable to the communities it affects.",
       imageSrc: "/images/eric-yang.jpg",
       imageAlt: "Eric Yang",
       linkedin: "https://linkedin.com/in/ericyang", // ← update
@@ -180,7 +180,7 @@ export const leadership = {
       name: "Malinda Lu",
       title: "Co-Founder & Design Lead",
       affiliation: "Computer Science & Mathematics, Wellesley College",
-      bio: "Malinda is a computer science and mathematics student at Wellesley College with three years of AI/medicine research experience across MIT and Wellesley, publishing at venues including ICML. She will join Microsoft AI as a software engineer. Before then, she is committed to building AI literacy infrastructure in the communities she grew up in.",
+      bio: "Malinda is a computer science and mathematics student from Wellesley College with three years of research experience in clinical foundation models and time-series data modeling at MIT and Wellesley. She is committed to making AI in medicine research more inclusive and more ethically grounded.",
       imageSrc: "/images/malinda-lu.jpg",
       imageAlt: "Malinda Lu",
       linkedin: "https://linkedin.com/in/malindalu", // ← update
@@ -197,11 +197,11 @@ export const collaborators = {
     {
       name: "Yale Sprout",
       type: "Academic Program",
-      status: "Partner",
+      status: "Partner Venue",
       description:
         "Yale Sprout is a student-run academic enrichment program that brings university-level instruction to motivated high school students. We delivered our inaugural lecture on AI in medicine at Yale Sprout in Spring 2026.",
       logoSrc: "/images/logo-yale-sprout.png", // ← add logo or leave blank
-      website: "https://yalesprout.yale.edu",
+      website: "https://yale.learningu.org/learn/sprout.html",
     },
     {
       name: "Newton Chinese School",
@@ -210,7 +210,7 @@ export const collaborators = {
       description:
         "Newton Chinese School has served the greater Boston Chinese-American community for decades. We are collaborating to embed an AI and medicine project-based course into their curriculum, with a focus on research skills and ethical thinking.",
       logoSrc: "/images/logo-newton-chinese-school.png",
-      website: "https://newtonchineseschool.org",
+      website: "https://www.newtonchineseschool.org/indexs.php",
     },
     {
       name: "Tzu Chi Foundation",
@@ -219,7 +219,7 @@ export const collaborators = {
       description:
         "The Tzu Chi Foundation is a global humanitarian organization with deep roots in the Asian-American community. We are developing an AI safety and literacy workshop tailored specifically for their older adult members.",
       logoSrc: "/images/logo-tzu-chi.png",
-      website: "https://tzuchi.us",
+      website: "https://tzuchi.us/",
     },
   ],
 };

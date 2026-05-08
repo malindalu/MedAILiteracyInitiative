@@ -133,7 +133,7 @@ export default function LeadershipPage() {
             Interested in Contributing?
           </h2>
           <p style={{ color: "var(--dark-brown)", fontSize: "1.05rem", maxWidth: "520px", margin: "0 auto 2rem" }}>
-            We are always looking for educators, researchers, and community organizers who share our mission. If that's you, reach out.
+            We are always looking for educators, researchers, community organizers, designers, and technologists who share our mission. If that's you, reach out.
           </p>
           <a href="/contact" className="btn btn-primary">
             Contact Us →

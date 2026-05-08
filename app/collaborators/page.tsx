@@ -3,7 +3,7 @@ import { collaborators } from "@/content";
 export const metadata = { title: "Collaborators" };
 
 const statusColors: Record<string, string> = {
-  Partner: "var(--light-green)",
+  "Partner Venue": "var(--light-green)",
   "In Development": "var(--dark-yellow)",
 };
 
