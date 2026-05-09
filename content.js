@@ -116,6 +116,11 @@ export const programs = {
       ],
       imageSrc: "/images/yale-sprout.jpg",
       imageAlt: "Yale Sprout lecture session",
+      embed: {
+        type: "pdf",
+        src: "/files/Yale Sprout AI in Medicine.pdf",
+        label: "View Lecture Slides",
+      }
     },
     {
       id: "newton-chinese-school",
@@ -139,6 +144,7 @@ export const programs = {
       ],
       imageSrc: "/images/newton-chinese-school.jpg",
       imageAlt: "Students working on AI projects",
+      embed: null,
     },
     {
       id: "tzu-chi",
@@ -161,6 +167,7 @@ export const programs = {
       ],
       imageSrc: "/images/tzu-chi.jpg",
       imageAlt: "Community workshop for older adults",
+      embed: null,
     },
   ],
 };
@@ -268,7 +275,7 @@ export const tutorials = {
         "A ground-up intuition for how neural networks recognize patterns — using medical imaging as the running example. No calculus required.",
       tags: ["Neural Networks", "Fundamentals"],
       href: "#", // ← link to your actual tutorial page or Google Doc
-      status: "available", // "available" | "coming-soon"
+      status: "coming-soon", // "available" | "coming-soon"
       statusLabel: "May 2026",
     },
     {

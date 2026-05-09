@@ -1,4 +1,5 @@
 import { programs } from "@/content";
+import PdfSlider from "@/components/PdfSlider";
 
 export const metadata = { title: "Programs" };
 
@@ -91,6 +92,21 @@ export default function ProgramsPage() {
                     </div>
                   </div>
 
+                  {/* Embed */}
+                  {/* {p.embed?.type === "pdf" && (
+                    <div style={{ marginTop: "2.5rem" }}>
+                      <div className="overline-dark" style={{ marginBottom: "0.75rem" }}>{p.embed.label}</div>
+                      <iframe
+                        src={p.embed.src}
+                        width="100%"
+                        height="600px"
+                        style={{ border: "1px solid rgba(0,212,255,0.2)", borderRadius: "8px" }}
+                      />
+                    </div>
+                  )} */}
+
+                  <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+
                   {/* Image card */}
                   <div
                     className="card"
@@ -129,6 +145,28 @@ export default function ProgramsPage() {
                         Photo coming soon
                       </div>
                     </div>
+                    
+                  </div>
+                       {/* {p.embed?.type === "pdf" && (
+                    <div style={{ marginTop: "2.5rem" }}>
+                      <div className="overline-dark" style={{ marginBottom: "0.75rem" }}>{p.embed.label}</div>
+                      <iframe
+                        src={p.embed.src}
+                        width="100%"
+                        height="600px"
+                        style={{ border: "1px solid rgba(0,212,255,0.2)", borderRadius: "8px" }}
+                      />
+                    </div>
+                  )} */}
+                  {/* PDF Slider — only if embed exists */}
+                  {p.embed?.type === "pdf" && (
+                    <div className="card" style={{ padding: "1rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                      <div className="overline-dark" style={{ marginBottom: "0.75rem", alignSelf: "flex-start" }}>
+                        {p.embed.label}
+                      </div>
+                      <PdfSlider src={p.embed.src} />
+                    </div>
+                  )}
                   </div>
                 </div>
 
