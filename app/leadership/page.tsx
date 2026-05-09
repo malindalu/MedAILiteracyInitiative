@@ -54,7 +54,8 @@ export default function LeadershipPage() {
                     />
                     {/* Fallback initials shown via CSS if image fails */}
                   </div>
-                  {m.linkedin && (
+                  {/* Linked In */}
+                  {/* {m.linkedin && (
                     <a
                       href={m.linkedin}
                       target="_blank"
@@ -70,7 +71,7 @@ export default function LeadershipPage() {
                     >
                       LinkedIn →
                     </a>
-                  )}
+                  )} */}
                 </div>
 
                 {/* Bio */}
@@ -87,7 +88,7 @@ export default function LeadershipPage() {
                   </h2>
                   <div
                     style={{
-                      fontSize: "0.85rem",
+                      fontSize: "1.0rem",
                       color: "var(--dark-brown)",
                       fontWeight: 500,
                       marginBottom: "0.5rem",
@@ -97,7 +98,7 @@ export default function LeadershipPage() {
                   </div>
                   <div
                     style={{
-                      fontSize: "0.8rem",
+                      fontSize: "1.0rem",
                       color: "var(--dark-green)",
                       marginBottom: "1.5rem",
                       fontStyle: "italic",

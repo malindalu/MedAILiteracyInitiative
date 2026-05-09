@@ -65,7 +65,7 @@ export default function ProgramsPage() {
                       <span style={{ color: "var(--gray)" }}>·</span>
                       <span style={{ color: "var(--dark-green)" }}>{p.duration}</span>
                     </div>
-                    <p style={{ fontSize: "1rem", color: "var(--dark-brown)", lineHeight: 1.8, marginBottom: "2rem" }}>
+                    <p style={{ fontSize: "1.1rem", color: "var(--dark-brown)", lineHeight: 1.8, marginBottom: "2rem" }}>
                       {p.description}
                     </p>
 
@@ -80,7 +80,7 @@ export default function ProgramsPage() {
                               display: "flex",
                               alignItems: "center",
                               gap: "0.75rem",
-                              fontSize: "0.9rem",
+                              fontSize: "1.0rem",
                               color: "var(--dark-brown)",
                             }}
                           >

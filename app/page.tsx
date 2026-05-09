@@ -146,7 +146,7 @@ export default function HomePage() {
             <div>
               <div className="overline-dark">Our Mission</div>
               <h2 className="section-headline" style={{ marginBottom: "1.5rem" }}>
-                Why AI Literacy in Medicine Can't Wait
+                Why AI Literacy in Medicine is Urgent
               </h2>
               <p style={{ fontSize: "1.15rem", color: "var(--dark-brown)", lineHeight: 1.8 }}>
                 {home.missionStatement}

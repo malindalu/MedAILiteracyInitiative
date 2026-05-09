@@ -180,8 +180,8 @@ export const leadership = {
     {
       name: "Eric Yang",
       title: "Co-Founder & Program Director",
-      affiliation: "Clinical Researcher, Mass General Brigham Mass Eye and Ear, Yale University",
-      bio: "Eric is a clinical researcher at Mass General Brigham Mass Eye and Ear with a background in computational genomics research at Yale University. He received his bachelor's degree in Biology with a Data Science minor from Boston University. His research sits at the intersection of AI and medicine, and he is passionate about making that work understandable to the communities it affects.",
+      affiliation: "Clinical Researcher",
+      bio: "Eric is a clinical researcher at Mass General Brigham Mass Eye and Ear with a background in computational genomics research at Yale University. He received his bachelor's degree in Biology with a minor in Data Science from Boston University. His research sits at the intersection of AI and medicine, and he is passionate about making that work understandable to the communities it affects.",
       imageSrc: "/images/eric-yang.jpg",
       imageAlt: "Eric Yang",
       linkedin: "https://linkedin.com/in/ericyang", // ← update
@@ -189,8 +189,8 @@ export const leadership = {
     {
       name: "Malinda Lu",
       title: "Co-Founder & Design Lead",
-      affiliation: "Computer Science & Mathematics, Wellesley College",
-      bio: "Malinda is a computer science and mathematics student from Wellesley College with three years of research experience in clinical foundation models and time-series data modeling at MIT and Wellesley. She is committed to making AI in medicine research more inclusive and more ethically grounded.",
+      affiliation: "Software Engineer",
+      bio: "Malinda received her Bachelor's degree in Computer Science with a minor in Mathematicsfrom Wellesley College. She has three years of research experience in clinical foundation models and time-series data modeling at MIT and Wellesley, with publications at venues such as ICML. She is committed to making AI in medicine research more inclusive and more ethically grounded.",
       imageSrc: "/images/malinda-lu.jpg",
       imageAlt: "Malinda Lu",
       linkedin: "https://linkedin.com/in/malindalu", // ← update
