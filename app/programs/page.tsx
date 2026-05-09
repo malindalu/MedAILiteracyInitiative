@@ -58,8 +58,8 @@ export default function ProgramsPage() {
                         flexWrap: "wrap",
                       }}
                     >
-                      <span>{p.host}</span>
-                      <span style={{ color: "var(--gray)" }}>·</span>
+                      {/* <span>{p.host}</span> */}
+                      {/* <span style={{ color: "var(--gray)" }}>·</span> */}
                       <span>{p.audience}</span>
                       <span style={{ color: "var(--gray)" }}>·</span>
                       <span style={{ color: "var(--dark-green)" }}>{p.duration}</span>

@@ -1,10 +1,22 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { home, programs, leadership } from "@/content";
+import { home, programs, leadership, tutorials } from "@/content";
 
 export default function HomePage() {
-  const featured = programs.items.filter((p) => home.featuredPrograms.includes(p.id));
+  const featured = programs.items
+  .filter((p) => home.featuredPrograms.includes(p.id))
+  .sort((a, b) => rankItem(a.status, a.date, "program") - rankItem(b.status, b.date, "program"));
+
+  type WorkItem =
+  | (typeof programs.items[0] & { kind: "program" })
+  | (typeof tutorials.items[0] & { kind: "tutorial" });
+
+  const workItems: WorkItem[] = [
+    ...featured.map((p) => ({ ...p, kind: "program" as const })),
+    ...tutorials.items.map((t) => ({ ...t, kind: "tutorial" as const })),
+  ].sort((a, b) => rankItem(a.status, a.date, a.kind) - rankItem(b.status, b.date, b.kind))
+  .slice(0, 6);
 
   return (
     <>
@@ -153,7 +165,7 @@ export default function HomePage() {
               }}
             >
               {[
-                { icon: "📑", title: "Tailored to Communities", body: "From high schoolers building classifiers to community members recognizing scams — literacy looks different for every audience." },
+                { icon: "📑", title: "Tailored to Communities", body: "From high schoolers exploring career options to community members trying unfamiliar technologies — literacy looks different for every audience." },
                 // { icon: "🏥", title: "Institutions", body: "We partner with schools, cultural organizations, and academic programs to embed AI literacy where it's needed most." },
                 { icon: "🔭", title: "Forward Thinkers", body: "Our programs don't just teach what AI does today — they train the critical frameworks needed to shape what it does tomorrow." },
               ].map((item) => (
@@ -171,42 +183,59 @@ export default function HomePage() {
         <style>{`@media (max-width: 768px) { section .container > div { grid-template-columns: 1fr !important; } }`}</style>
       </section>
 
-      {/* ── Programs preview ──────────────────────────────── */}
+      {/* ── Our Work ──────────────────────────────────────── */}
       <section className="section section--alt">
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "3rem", flexWrap: "wrap", gap: "1rem" }}>
             <div>
-              <div className="overline-dark">Programs</div>
-              <h2 className="section-headline">Where We Teach</h2>
+              <div className="overline-dark">Our Work</div>
+              <h2 className="section-headline">Programs & Resources</h2>
             </div>
-            <Link href="/programs" className="btn btn-outline">View All Programs</Link>
+            <div style={{ display: "flex", gap: "1rem" }}>
+              <Link href="/programs" className="btn btn-outline">All Programs</Link>
+              <Link href="/tutorials" className="btn btn-outline">All Tutorials</Link>
+            </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }}>
-            {featured.map((p) => (
-              <div key={p.id} className="card" style={{ padding: "1.75rem" }}>
-                <span className={`badge badge--${p.status}`} style={{ marginBottom: "1rem" }}>
-                  {p.statusLabel}
-                </span>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-                  {p.title}
-                </div>
-                <div style={{ fontSize: "0.9rem", color: "var(--cyan)", marginBottom: "0.75rem", fontWeight: 500 }}>
-                  {p.host} · {p.audience}
-                </div>
-                <p style={{ fontSize: "1.0rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>
-                  {p.description.slice(0, 160)}…
-                </p>
-                <Link
-                  href="/programs"
-                  style={{ display: "inline-block", marginTop: "1.25rem", fontSize: "0.9rem", color: "var(--cyan)", fontWeight: 500 }}
-                >
-                  Learn more →
-                </Link>
-              </div>
-            ))}
+
+            {/* Program cards */}
+            {workItems.map((item) =>
+                item.kind === "program" ? (
+                  <div key={item.id} className="card" style={{ padding: "1.75rem" }}>
+                    <span className={`badge badge--${item.status}`} style={{ marginBottom: "1rem" }}>
+                      {item.status === "completed"
+                        ? `Program Completed · ${item.statusLabel}`
+                        : `Program ${item.statusLabel}`}
+                    </span>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "0.5rem" }}>{item.title}</div>
+                    <div style={{ fontSize: "0.9rem", color: "var(--cyan)", marginBottom: "0.75rem", fontWeight: 500 }}>
+                      {item.host} · {item.audience}
+                    </div>
+                    <p style={{ fontSize: "1.0rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>{item.description.slice(0, 160)}…</p>
+                    <Link href="/programs" style={{ display: "inline-block", marginTop: "1.25rem", fontSize: "0.9rem", color: "var(--cyan)", fontWeight: 500 }}>
+                      Learn more →
+                    </Link>
+                  </div>
+                ) : (
+                  <div key={item.id} className="card" style={{ padding: "1.75rem" }}>
+                    <span className={`badge badge--${item.status === "available" ? "completed" : "upcoming"}`} style={{ marginBottom: "1rem" }}>
+                      {item.status === "available"
+                        ? `Tutorial Published · ${item.statusLabel}`
+                        : `Tutorial Coming Soon · ${item.level}`}
+                    </span>
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", marginBottom: "0.5rem" }}>{item.title}</div>
+                    <div style={{ fontSize: "0.9rem", color: "var(--cyan)", marginBottom: "0.75rem", fontWeight: 500 }}>{item.duration} · {item.level}</div>
+                    <p style={{ fontSize: "1.0rem", color: "var(--dark-brown)", lineHeight: 1.7 }}>{item.description.slice(0, 160)}…</p>
+                    <Link href={item.href} style={{ display: "inline-block", marginTop: "1.25rem", fontSize: "0.9rem", color: "var(--cyan)", fontWeight: 500 }}>
+                      {item.status === "available" ? "Read tutorial →" : "Coming soon"}
+                    </Link>
+                  </div>
+                )
+              )}
+
           </div>
         </div>
-        <style>{`@media (max-width: 900px) { .programs-grid { grid-template-columns: 1fr !important; } }`}</style>
+        <style>{`@media (max-width: 900px) { .our-work-grid { grid-template-columns: 1fr !important; } }`}</style>
       </section>
 
       {/* ── Leadership teaser ─────────────────────────────── */}
@@ -289,4 +318,18 @@ export default function HomePage() {
       </section>
     </>
   );
+}
+
+function rankItem(status: string, date: string, type: "program" | "tutorial") {
+  const isComplete = status === "completed" || status === "available";
+  const typePriority = type === "program" ? 0 : 1; // program before tutorial within same tier
+  const time = new Date(date).getTime();
+
+  if (isComplete) {
+    // Tier 0: completed — sorted by date desc, program before tutorial on same date
+    return typePriority * 1e9 - time;
+  } else {
+    // Tier 1: in-progress/coming-soon — programs first, then tutorials, each by date desc
+    return 1e15 + typePriority * 1e12 - time;
+  }
 }

@@ -33,7 +33,7 @@ export const home = {
   hero: {
     headline: "Understanding Health in the \nAge of AI" ,
     subheadline:
-      "We bring AI education to students and communities in the New England Area who want to understand how healthcare is changing and how to navigate it wisely for their wellbeing",
+      "We bring AI education to students and communities in the New England Area who want to understand how their healthcare is changing under new technologies.",
     cta: { label: "See Our Programs", href: "/programs" },
     ctaSecondary: { label: "Learn About Us", href: "/about" },
     // Place a hero image at /public/images/hero.jpg (optional — remove imageSrc to hide)
@@ -98,7 +98,8 @@ export const programs = {
     {
       id: "yale-sprout",
       status: "completed", // "completed" | "in-progress" | "upcoming"
-      statusLabel: "Completed · Spring 2026",
+      date: "2026-04",
+      statusLabel: "April 2026",
       title: "The Future of AI in Medicine",
       host: "Yale Sprout 2026",
       audience: "Middle & High School Students",
@@ -118,8 +119,9 @@ export const programs = {
     },
     {
       id: "newton-chinese-school",
+      date: "2026-01",
       status: "in-progress",
-      statusLabel: "In Development · Collaborating",
+      statusLabel: "In Development",
       title: "AI + Health Explorer",
       host: "Newton Chinese School",
       audience: "Middle & High School Students",
@@ -140,8 +142,9 @@ export const programs = {
     },
     {
       id: "tzu-chi",
+      date: "2026-06",
       status: "in-progress",
-      statusLabel: "In Development · Collaborating",
+      statusLabel: "In Development",
       title: "AI Safety for Everyday Life",
       host: "Tzu Chi Foundation",
       audience: "Older Adults",
@@ -257,6 +260,7 @@ export const tutorials = {
   items: [
     {
       id: "intro-neural-networks",
+      date: "2026-04",
       title: "How Neural Networks Learn",
       level: "Beginner",
       duration: "15 min read",
@@ -265,10 +269,12 @@ export const tutorials = {
       tags: ["Neural Networks", "Fundamentals"],
       href: "#", // ← link to your actual tutorial page or Google Doc
       status: "available", // "available" | "coming-soon"
+      statusLabel: "May 2026",
     },
     {
       id: "medical-image-classifier",
       title: "Build a Medical Image Classifier",
+      date: "2026-05",
       level: "Intermediate",
       duration: "45 min",
       description:
@@ -279,6 +285,7 @@ export const tutorials = {
     },
     {
       id: "ai-bias-medicine",
+      date: "2026-06",
       title: "AI Bias in Medicine: A Critical Framework",
       level: "Beginner",
       duration: "20 min read",
@@ -290,6 +297,7 @@ export const tutorials = {
     },
     {
       id: "llms-clinical-notes",
+      date: "2026-07",
       title: "How LLMs Are Used in Clinical Notetaking",
       level: "Beginner",
       duration: "15 min read",
