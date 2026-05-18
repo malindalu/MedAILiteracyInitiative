@@ -159,12 +159,12 @@ export default function ProgramsPage() {
                     </div>
                   )} */}
                   {/* PDF Slider — only if embed exists */}
-                  {p.embed?.type === "pdf" && (
+                  {p.embed && (p.embed as any).type === "pdf" && (
                     <div className="card" style={{ padding: "1rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
                       <div className="overline-dark" style={{ marginBottom: "0.75rem", alignSelf: "flex-start" }}>
-                        {p.embed.label}
+                        {(p.embed as any).label}
                       </div>
-                      <PdfSlider src={p.embed.src} />
+                      <PdfSlider src={(p.embed as any).src} />
                     </div>
                   )}
                   </div>
