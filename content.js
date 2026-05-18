@@ -116,7 +116,8 @@ export const programs = {
       ],
       imageSrc: "/images/yale-sprout.jpg",
       imageAlt: "Yale Sprout lecture session",
-      // embed: {
+      embed: null,
+      // {
       //   type: "pdf",
       //   src: "/files/Yale Sprout AI in Medicine.pdf",
       //   label: "View Lecture Slides",
